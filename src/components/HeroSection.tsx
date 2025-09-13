@@ -25,22 +25,13 @@ const HeroSection = () => {
           <h2 className="text-2xl md:text-3xl text-foreground/80 mb-8 font-light">
             Data Scientist & AI Developer
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             University of Miami student passionate about leveraging data science, AI, and full-stack development 
             to create innovative solutions in finance and technology.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="hero-gradient text-white px-8 py-4 rounded-full font-semibold hover:shadow-[var(--shadow-float)] hover:scale-105 transition-all duration-300">
-              Download Resume
-            </button>
-            <button className="border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300">
-              Contact Me
-            </button>
-          </div>
         </div>
         
-        <div className={`mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+        <div className={`mt-12 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="animate-bounce">
             <svg className="w-6 h-6 mx-auto text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
