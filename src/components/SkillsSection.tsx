@@ -58,10 +58,11 @@ const SkillsSection = () => {
   return (
     <section ref={sectionRef} className="py-20 relative">
       <div className="container mx-auto px-6">
-        <div className={`resume-section ${isVisible ? 'animate-in' : ''} max-w-6xl mx-auto`}>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Skills & Leadership</h2>
-            <div className="w-24 h-1 hero-gradient mx-auto rounded-full" />
+        <div className={`resume-section ${isVisible ? 'animate-in' : ''} max-w-7xl mx-auto relative`}>
+          <div className="section-number">03</div>
+          <div className="text-center mb-16">
+            <h2 className="font-display text-5xl font-bold text-foreground mb-6">Expertise & Leadership</h2>
+            <div className="executive-divider" />
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12">
@@ -73,7 +74,7 @@ const SkillsSection = () => {
                   className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                   style={{ transitionDelay: `${categoryIndex * 100}ms` }}
                 >
-                  <h3 className="text-xl font-semibold text-primary mb-4">{category.title}</h3>
+                  <h3 className="font-display text-2xl font-semibold text-primary mb-6">{category.title}</h3>
                   <div className="flex flex-wrap gap-3">
                     {category.skills.map((skill, skillIndex) => (
                       <span 
@@ -91,15 +92,15 @@ const SkillsSection = () => {
 
             {/* Leadership & Activities */}
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-primary mb-6">Leadership & Activities</h3>
+              <h3 className="font-display text-2xl font-semibold text-primary mb-8">Leadership & Activities</h3>
               {achievements.map((achievement, index) => (
                 <div 
                   key={achievement.title}
                   className={`project-card transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                   style={{ transitionDelay: `${(index + 2) * 150}ms` }}
                 >
-                  <h4 className="font-semibold text-foreground mb-2">{achievement.title}</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{achievement.description}</p>
+                  <h4 className="font-sans font-semibold text-foreground mb-3 text-lg">{achievement.title}</h4>
+                  <p className="font-sans text-muted-foreground leading-relaxed">{achievement.description}</p>
                 </div>
               ))}
             </div>

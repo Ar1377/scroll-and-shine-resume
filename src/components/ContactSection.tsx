@@ -57,13 +57,14 @@ const ContactSection = () => {
   return (
     <section ref={sectionRef} className="py-20 relative">
       <div className="container mx-auto px-6">
-        <div className={`resume-section ${isVisible ? 'animate-in' : ''} max-w-4xl mx-auto text-center`}>
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Let's Connect</h2>
-            <div className="w-24 h-1 hero-gradient mx-auto rounded-full mb-6" />
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className={`resume-section ${isVisible ? 'animate-in' : ''} max-w-5xl mx-auto text-center relative`}>
+          <div className="section-number">04</div>
+          <div className="mb-16">
+            <h2 className="font-display text-5xl font-bold text-foreground mb-6">Let's Connect</h2>
+            <div className="executive-divider mb-8" />
+            <p className="font-sans text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               I'm always interested in discussing new opportunities, innovative projects, 
-              and collaborations in data science, AI, and finance.
+              and collaborations in data science, artificial intelligence, and finance.
             </p>
           </div>
           
@@ -82,8 +83,8 @@ const ContactSection = () => {
                     {method.icon}
                   </div>
                   <div className="text-left">
-                    <h3 className="font-semibold text-foreground">{method.title}</h3>
-                    <p className="text-muted-foreground text-sm">{method.value}</p>
+                    <h3 className="font-sans font-semibold text-foreground text-lg">{method.title}</h3>
+                    <p className="font-sans text-muted-foreground">{method.value}</p>
                   </div>
                 </div>
               </a>
@@ -91,8 +92,8 @@ const ContactSection = () => {
           </div>
 
           <div className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '400ms' }}>
-            <button className="hero-gradient text-white px-8 py-4 rounded-full font-semibold hover:shadow-[var(--shadow-float)] hover:scale-105 transition-all duration-300">
-              Download Full Resume
+            <button className="hero-gradient text-white px-10 py-4 rounded-full font-sans font-semibold text-lg hover:shadow-[var(--shadow-executive)] hover:scale-105 transition-all duration-300">
+              Download Resume
             </button>
           </div>
         </div>

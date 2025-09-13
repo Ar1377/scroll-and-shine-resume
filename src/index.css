@@ -2,57 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Professional Resume Design System */
+/* Executive-Level Professional Design System */
 
 @layer base {
   :root {
-    /* Professional blue/navy palette */
-    --background: 220 20% 97%;
-    --foreground: 220 50% 15%;
+    /* Sophisticated navy & gold palette */
+    --background: 210 11% 96%;
+    --foreground: 210 24% 16%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 50% 15%;
+    --card-foreground: 210 24% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 50% 15%;
+    --popover-foreground: 210 24% 16%;
 
-    --primary: 220 90% 56%;
+    --primary: 210 100% 20%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 220 90% 70%;
+    --primary-light: 210 100% 35%;
 
-    --secondary: 220 15% 95%;
-    --secondary-foreground: 220 50% 25%;
+    --secondary: 210 16% 93%;
+    --secondary-foreground: 210 24% 16%;
 
-    --muted: 220 15% 95%;
-    --muted-foreground: 220 25% 50%;
+    --muted: 210 16% 93%;
+    --muted-foreground: 210 12% 47%;
 
-    --accent: 220 100% 65%;
-    --accent-foreground: 0 0% 100%;
-    --accent-glow: 220 100% 80%;
+    --accent: 45 86% 58%;
+    --accent-foreground: 210 24% 16%;
+    --accent-light: 45 86% 70%;
 
-    --success: 142 76% 36%;
+    --success: 142 69% 58%;
     --success-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 65% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 220 90% 56%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 100% 20%;
 
-    /* Professional gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 90% 56%), hsl(220 100% 65%));
-    --gradient-section: linear-gradient(135deg, hsl(220 100% 98%), hsl(220 50% 96%));
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100% / 0.8), hsl(220 50% 98% / 0.9));
+    /* Executive gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 20%), hsl(210 100% 35%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 86% 58%), hsl(45 86% 70%));
+    --gradient-section: linear-gradient(180deg, hsl(210 11% 96%), hsl(210 16% 98%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 16% 98%));
     
-    /* Professional shadows */
-    --shadow-card: 0 4px 20px -2px hsl(220 50% 15% / 0.08);
-    --shadow-card-hover: 0 8px 30px -2px hsl(220 50% 15% / 0.12);
-    --shadow-float: 0 10px 40px -4px hsl(220 90% 56% / 0.15);
+    /* Executive shadows */
+    --shadow-subtle: 0 2px 8px -1px hsl(210 24% 16% / 0.04);
+    --shadow-card: 0 8px 32px -4px hsl(210 24% 16% / 0.08);
+    --shadow-card-hover: 0 16px 48px -4px hsl(210 24% 16% / 0.12);
+    --shadow-executive: 0 20px 60px -8px hsl(210 100% 20% / 0.15);
 
-    /* Animations */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Professional animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-executive: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 
     --radius: 0.5rem;
 
@@ -123,11 +125,11 @@
 }
 
 @layer components {
-  /* Floating resume components */
+  /* Executive resume components */
   .resume-section {
-    @apply bg-gradient-to-br from-card to-card/80 backdrop-blur-sm rounded-2xl p-8 mb-8 
-           transition-all duration-500 ease-out transform translate-y-8 opacity-0
-           border border-border/50 shadow-[var(--shadow-card)];
+    @apply bg-gradient-to-br from-card to-card/95 backdrop-blur-sm rounded-3xl p-10 mb-12 
+           transition-all duration-700 ease-out transform translate-y-12 opacity-0
+           border border-border shadow-[var(--shadow-card)];
   }
   
   .resume-section.animate-in {
@@ -135,11 +137,15 @@
   }
   
   .resume-section:hover {
-    @apply shadow-[var(--shadow-float)] scale-[1.02];
+    @apply shadow-[var(--shadow-executive)] scale-[1.01];
   }
   
   .hero-gradient {
     background: var(--gradient-hero);
+  }
+  
+  .accent-gradient {
+    background: var(--gradient-accent);
   }
   
   .section-gradient {
@@ -147,13 +153,28 @@
   }
   
   .skill-tag {
-    @apply bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium
-           border border-primary/20 hover:bg-primary/20 transition-colors;
+    @apply bg-primary/8 text-primary px-4 py-2 rounded-full text-sm font-medium font-sans
+           border border-primary/15 hover:bg-primary/12 hover:border-primary/25 
+           transition-all duration-300 hover:scale-105;
+  }
+  
+  .skill-tag.accent {
+    @apply bg-accent/10 text-accent-foreground border-accent/20 hover:bg-accent/15;
   }
   
   .project-card {
-    @apply bg-gradient-to-br from-card to-secondary/30 p-6 rounded-xl
-           border border-border/50 hover:border-primary/30 transition-all duration-300
-           hover:shadow-[var(--shadow-card)] hover:-translate-y-1;
+    @apply bg-gradient-to-br from-card to-secondary/20 p-8 rounded-2xl
+           border border-border hover:border-primary/20 transition-all duration-500
+           hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-2;
+  }
+  
+  .executive-divider {
+    @apply w-16 h-0.5 mx-auto rounded-full;
+    background: var(--gradient-accent);
+  }
+  
+  .section-number {
+    @apply absolute -top-2 -left-2 w-8 h-8 rounded-full flex items-center justify-center
+           text-xs font-bold text-white bg-primary shadow-lg;
   }
 }

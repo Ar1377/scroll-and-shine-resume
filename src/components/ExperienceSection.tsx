@@ -61,10 +61,11 @@ const ExperienceSection = () => {
   return (
     <section ref={sectionRef} className="py-20 relative">
       <div className="container mx-auto px-6">
-        <div className={`resume-section ${isVisible ? 'animate-in' : ''} max-w-6xl mx-auto`}>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Experience & Projects</h2>
-            <div className="w-24 h-1 hero-gradient mx-auto rounded-full" />
+        <div className={`resume-section ${isVisible ? 'animate-in' : ''} max-w-7xl mx-auto relative`}>
+          <div className="section-number">02</div>
+          <div className="text-center mb-16">
+            <h2 className="font-display text-5xl font-bold text-foreground mb-6">Experience & Projects</h2>
+            <div className="executive-divider" />
           </div>
           
           <div className="space-y-8">
@@ -74,27 +75,27 @@ const ExperienceSection = () => {
                 className={`project-card transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="md:col-span-2">
-                    <div className="flex items-center gap-3 mb-3">
-                      <h3 className="text-xl font-bold text-primary">{project.title}</h3>
-                      <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
+                <div className="grid lg:grid-cols-4 gap-8">
+                  <div className="lg:col-span-3">
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 mb-6">
+                      <h3 className="font-display text-2xl font-bold text-primary">{project.title}</h3>
+                      <span className="skill-tag accent w-fit">
                         {project.role}
                       </span>
                     </div>
-                    <p className="text-muted-foreground mb-4">{project.description}</p>
-                    <ul className="space-y-2">
+                    <p className="font-sans text-lg text-muted-foreground mb-6 leading-relaxed">{project.description}</p>
+                    <div className="space-y-3">
                       {project.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-foreground/80">
-                          <span className="text-primary mt-1">•</span>
-                          {highlight}
-                        </li>
+                        <div key={idx} className="flex items-start gap-3">
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                          <p className="font-sans text-foreground leading-relaxed">{highlight}</p>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
-                  <div className="space-y-3">
-                    <h4 className="font-semibold text-foreground">Technologies</h4>
-                    <div className="flex flex-wrap gap-2">
+                  <div className="space-y-4">
+                    <h4 className="font-display text-lg font-semibold text-foreground">Tech Stack</h4>
+                    <div className="flex flex-wrap gap-3">
                       {project.technologies.map((tech) => (
                         <span key={tech} className="skill-tag">
                           {tech}

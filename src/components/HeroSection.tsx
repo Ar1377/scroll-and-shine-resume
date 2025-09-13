@@ -17,21 +17,22 @@ const HeroSection = () => {
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
       
-      <div className="container mx-auto px-6 text-center relative z-10">
-        <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-          <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6 tracking-tight">
+      <div className="container mx-auto px-8 text-center relative z-10">
+        <div className={`transition-all duration-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+          <h1 className="font-display text-7xl md:text-8xl font-bold bg-gradient-to-r from-primary via-primary-light to-accent bg-clip-text text-transparent mb-8 tracking-tight leading-tight">
             Adi Rao
           </h1>
-          <h2 className="text-2xl md:text-3xl text-foreground/80 mb-8 font-light">
+          <div className="executive-divider mb-8" />
+          <h2 className="font-sans text-2xl md:text-3xl text-foreground font-medium mb-10 tracking-wide">
             Data Scientist & AI Developer
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            University of Miami student passionate about leveraging data science, AI, and full-stack development 
-            to create innovative solutions in finance and technology.
+          <p className="font-sans text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-light">
+            University of Miami student passionate about leveraging data science, artificial intelligence, 
+            and full-stack development to create innovative solutions in finance and technology.
           </p>
         </div>
         
-        <div className={`mt-12 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+        <div className={`mt-16 transition-all duration-1200 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="animate-bounce">
             <svg className="w-6 h-6 mx-auto text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
