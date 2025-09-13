@@ -20,7 +20,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6 tracking-tight">
-            Your Name
+            Adi Rao
           </h1>
           <h2 className="text-2xl md:text-3xl text-foreground/80 mb-8 font-light">
             Data Scientist & AI Developer
