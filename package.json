@@ -1,4 +1,7 @@
 {
+npm pkg set scripts.predeploy="npm run build"
+npm pkg set scripts.deploy="gh-pages -d dist"
+
   "name": "vite_react_shadcn_ts",
   "private": true,
   "version": "0.0.0",
