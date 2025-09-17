@@ -48,7 +48,7 @@ const ExperienceSection = () => {
     {
       title: 'Personal Investment Portfolio',
       role: 'Finance & Investment Strategy',
-      description: 'Personally managed Roth IRA with $12k+ contributions, analyzing long-term returns.',
+      description: 'Personally managed Roth IRA with substantial contributions, analyzing long-term returns.',
       technologies: ['Quantitative Analysis', 'Portfolio Strategy', 'ETF Analysis'],
       highlights: [
         'Applied quantitative methods to evaluate trading patterns',
