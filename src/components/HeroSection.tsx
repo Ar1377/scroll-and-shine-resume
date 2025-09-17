@@ -19,11 +19,6 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-8 text-center relative z-10 max-w-6xl">
         <div className={`transition-all duration-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-          <div className="mb-6">
-            <div className="executive-badge inline-block mb-6">
-              Executive Portfolio
-            </div>
-          </div>
           <h1 className="executive-heading text-8xl md:text-9xl mb-8">
             Adi Rao
           </h1>
