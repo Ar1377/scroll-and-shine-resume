@@ -153,13 +153,38 @@
   }
   
   .skill-tag {
-    @apply bg-primary/8 text-primary px-4 py-2 rounded-full text-sm font-medium font-sans
-           border border-primary/15 hover:bg-primary/12 hover:border-primary/25 
-           transition-all duration-300 hover:scale-105;
+    @apply bg-primary/[0.08] text-primary px-4 py-2 rounded-full text-sm font-medium font-sans
+           border border-primary/[0.15] hover:bg-primary/[0.12] hover:border-primary/[0.25] 
+           transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md;
   }
   
   .skill-tag.accent {
-    @apply bg-accent/10 text-accent-foreground border-accent/20 hover:bg-accent/15;
+    @apply bg-accent/[0.1] text-accent-foreground border-accent/[0.2] hover:bg-accent/[0.15] 
+           shadow-sm hover:shadow-md;
+  }
+  
+  /* Executive enhancements */
+  .executive-card {
+    @apply bg-gradient-to-br from-card via-card/[0.98] to-secondary/[0.1] p-10 rounded-3xl
+           border-2 border-primary/[0.08] shadow-[0_20px_60px_-12px_rgba(0,0,0,0.08)]
+           hover:shadow-[0_32px_80px_-12px_rgba(0,0,0,0.15)] hover:border-primary/[0.15]
+           transition-all duration-700 hover:-translate-y-3 backdrop-blur-sm;
+  }
+  
+  .executive-heading {
+    @apply font-display font-bold bg-gradient-to-r from-primary via-primary to-accent 
+           bg-clip-text text-transparent tracking-tight leading-tight;
+  }
+  
+  .executive-text {
+    @apply font-sans text-foreground/90 leading-relaxed font-light tracking-wide;
+  }
+  
+  .executive-badge {
+    @apply bg-gradient-to-r from-primary/[0.1] to-accent/[0.1] text-primary
+           px-6 py-3 rounded-2xl text-sm font-semibold tracking-wide
+           border border-primary/[0.2] shadow-lg hover:shadow-xl
+           hover:scale-105 transition-all duration-300;
   }
   
   .project-card {

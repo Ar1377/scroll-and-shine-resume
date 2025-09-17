@@ -60,41 +60,35 @@ const ContactSection = () => {
         <div className={`resume-section ${isVisible ? 'animate-in' : ''} max-w-5xl mx-auto text-center relative`}>
           <div className="section-number">04</div>
           <div className="mb-16">
-            <h2 className="font-display text-5xl font-bold text-foreground mb-6">Let's Connect</h2>
+            <h2 className="executive-heading text-5xl mb-8">Let's Connect</h2>
             <div className="executive-divider mb-8" />
-            <p className="font-sans text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              I'm always interested in discussing new opportunities, innovative projects, 
-              and collaborations in data science, artificial intelligence, and finance.
+            <p className="executive-text text-xl max-w-4xl mx-auto">
+              Ready to collaborate on transformative data science initiatives and drive strategic innovation 
+              through artificial intelligence solutions in finance and technology sectors.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {contactMethods.map((method, index) => (
               <a
                 key={method.title}
                 href={method.href}
                 target={method.href.startsWith('http') ? '_blank' : undefined}
                 rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className={`project-card group hover:scale-105 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+                className={`executive-card group transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <div className="flex items-center gap-4">
-                  <div className="text-primary group-hover:text-accent transition-colors duration-300">
-                    {method.icon}
+                <div className="text-center">
+                  <div className="flex items-center justify-center w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-primary/[0.1] to-accent/[0.1] rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-primary group-hover:text-accent transition-colors duration-300">
+                      {method.icon}
+                    </div>
                   </div>
-                  <div className="text-left">
-                    <h3 className="font-sans font-semibold text-foreground text-lg">{method.title}</h3>
-                    <p className="font-sans text-muted-foreground">{method.value}</p>
-                  </div>
+                  <h3 className="executive-heading text-xl mb-4">{method.title}</h3>
+                  <p className="executive-text text-lg">{method.value}</p>
                 </div>
               </a>
             ))}
-          </div>
-
-          <div className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`} style={{ transitionDelay: '400ms' }}>
-            <button className="hero-gradient text-white px-10 py-4 rounded-full font-sans font-semibold text-lg hover:shadow-[var(--shadow-executive)] hover:scale-105 transition-all duration-300">
-              Download Resume
-            </button>
           </div>
         </div>
       </div>

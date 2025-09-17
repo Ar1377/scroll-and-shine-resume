@@ -72,18 +72,18 @@ const ExperienceSection = () => {
             {projects.map((project, index) => (
               <div 
                 key={project.title} 
-                className={`project-card transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                className={`executive-card transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 <div className="grid lg:grid-cols-4 gap-8">
                   <div className="lg:col-span-3">
-                    <div className="flex flex-col lg:flex-row lg:items-center gap-4 mb-6">
-                      <h3 className="font-display text-2xl font-bold text-primary">{project.title}</h3>
-                      <span className="skill-tag accent w-fit">
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-6 mb-8">
+                      <h3 className="executive-heading text-3xl">{project.title}</h3>
+                      <div className="executive-badge w-fit">
                         {project.role}
-                      </span>
+                      </div>
                     </div>
-                    <p className="font-sans text-lg text-muted-foreground mb-6 leading-relaxed">{project.description}</p>
+                    <p className="executive-text text-xl mb-8">{project.description}</p>
                     <div className="space-y-3">
                       {project.highlights.map((highlight, idx) => (
                         <div key={idx} className="flex items-start gap-3">

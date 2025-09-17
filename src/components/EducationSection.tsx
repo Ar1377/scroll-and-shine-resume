@@ -32,29 +32,36 @@ const EducationSection = () => {
           </div>
           
           <div className="grid lg:grid-cols-5 gap-12">
-            <div className="lg:col-span-3 space-y-8">
-              <div className="bg-gradient-to-br from-primary/5 to-accent/5 p-8 rounded-2xl border border-primary/10">
-                <h3 className="font-display text-3xl font-semibold text-primary mb-4">University of Miami</h3>
-                <p className="font-sans text-xl text-muted-foreground mb-3">Coral Gables, Florida</p>
-                <p className="font-sans text-lg text-foreground font-medium mb-4">Bachelor of Science in Data Science & Artificial Intelligence</p>
-                <div className="flex items-center gap-2">
-                  <span className="skill-tag accent">Expected Graduation: 2025</span>
+            <div className="lg:col-span-3">
+              <div className="executive-card">
+                <div className="mb-6">
+                  <div className="executive-badge inline-block mb-4">
+                    Premier Institution
+                  </div>
+                </div>
+                <h3 className="executive-heading text-4xl mb-6">University of Miami</h3>
+                <p className="executive-text text-xl mb-4">Coral Gables, Florida</p>
+                <p className="font-display text-2xl text-foreground font-semibold mb-6">
+                  Bachelor of Science in Data Science & Artificial Intelligence
+                </p>
+                <div className="executive-badge">
+                  Expected Graduation: 2025
                 </div>
               </div>
             </div>
             
-            <div className="lg:col-span-2 space-y-6">
-              <h4 className="font-display text-2xl font-semibold text-foreground mb-8">Core Curriculum</h4>
-              <div className="space-y-4">
+            <div className="lg:col-span-2 space-y-8">
+              <h4 className="executive-heading text-3xl mb-10">Core Curriculum</h4>
+              <div className="space-y-6">
                 {[
-                  { course: 'Machine Learning', focus: 'Advanced Algorithms' },
-                  { course: 'Data Visualization', focus: 'Statistical Graphics' }, 
-                  { course: 'Algorithms', focus: 'Computational Theory' },
-                  { course: 'Financial Data Analysis', focus: 'Quantitative Methods' }
+                  { course: 'Machine Learning', focus: 'Advanced Algorithms & Neural Networks' },
+                  { course: 'Data Visualization', focus: 'Statistical Graphics & Analytics' }, 
+                  { course: 'Algorithms', focus: 'Computational Theory & Optimization' },
+                  { course: 'Financial Data Analysis', focus: 'Quantitative Methods & Modeling' }
                 ].map((item, index) => (
-                  <div key={item.course} className={`project-card transition-all duration-500`} style={{ animationDelay: `${index * 150}ms` }}>
-                    <h5 className="font-sans font-semibold text-foreground mb-1">{item.course}</h5>
-                    <p className="font-sans text-sm text-muted-foreground">{item.focus}</p>
+                  <div key={item.course} className={`executive-card transition-all duration-700`} style={{ animationDelay: `${index * 150}ms` }}>
+                    <h5 className="executive-heading text-lg mb-3">{item.course}</h5>
+                    <p className="executive-text">{item.focus}</p>
                   </div>
                 ))}
               </div>

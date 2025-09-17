@@ -71,10 +71,10 @@ const SkillsSection = () => {
               {skillCategories.map((category, categoryIndex) => (
                 <div 
                   key={category.title}
-                  className={`transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                  className={`executive-card transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                   style={{ transitionDelay: `${categoryIndex * 100}ms` }}
                 >
-                  <h3 className="font-display text-2xl font-semibold text-primary mb-6">{category.title}</h3>
+                  <h3 className="executive-heading text-2xl mb-8">{category.title}</h3>
                   <div className="flex flex-wrap gap-3">
                     {category.skills.map((skill, skillIndex) => (
                       <span 
@@ -96,11 +96,11 @@ const SkillsSection = () => {
               {achievements.map((achievement, index) => (
                 <div 
                   key={achievement.title}
-                  className={`project-card transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                  className={`executive-card transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                   style={{ transitionDelay: `${(index + 2) * 150}ms` }}
                 >
-                  <h4 className="font-sans font-semibold text-foreground mb-3 text-lg">{achievement.title}</h4>
-                  <p className="font-sans text-muted-foreground leading-relaxed">{achievement.description}</p>
+                  <h4 className="executive-heading text-xl mb-4">{achievement.title}</h4>
+                  <p className="executive-text text-lg">{achievement.description}</p>
                 </div>
               ))}
             </div>
